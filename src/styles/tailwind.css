@@ -1,12 +1,31 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
 
+@plugin "daisyui" {
+  themes: ;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 @theme {
-  /* Her tilføjes theme variable // tokens */
+  --color-orange: #ed642b;
+  --color-green: #dcf6ce;
+  --color-darkgreen: #26533f;
+  --color-beige: #fceee6;
+  --color-brown: #5f280c;
+  --color-darkbrown: #5f280c;
+
+  --font-unbounded: "unbounded";
+  --font-brico: "bricolage grotesque";
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 
 @layer base {
   *,
@@ -18,9 +37,7 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
 }
