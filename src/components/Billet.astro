@@ -1,0 +1,25 @@
+---
+import Heading from '../components/Heading.astro';
+import Link from '../components/Link.astro';
+
+const { url="#", cardimage="", cardimagealt="", cardtitel="", cardtekst="", cardbuttontekst="",
+  badgenyt="false", badgerabat="false", badgefaatilbage="" } = Astro.props;
+---
+
+<div class="card bg-base-100 w-full shadow-sm">
+    <figure class="relative">
+      {(badgenyt === "true") && <div class="badge badge-primary absolute top-4 left-0">Ny vin</div>}
+      {(badgerabat !== "false") && <div class="badge badge-secondary absolute rounded-full top-4 right-0 hover:rotate-6 transition-all">20 %</div>}
+      {(badgefaatilbage === "true") && <div class="badge badge-warning @sm:badge-xl absolute bottom-4 left-0">Kun få flasker tilbage</div>}
+      <img
+       src={cardimage}
+       alt={cardimagealt} />
+    </figure>
+    <div class="card-body">
+      <Heading htmlheading="h2" size="medium" Stylingclasses="card-titel">{cardtitel}</Heading>
+      <p>{cardtekst}</p>
+      <div class="card-actions justify-end">
+        <Link href={url} variant="primary" size="medium">{cardbuttontekst}</Link>
+      </div>
+    </div>
+  </div>
