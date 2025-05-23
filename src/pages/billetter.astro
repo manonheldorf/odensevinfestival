@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import Heading from "../components/Heading.astro";
 import Button from '../components/Button.astro';
 import Billet from '../components/Billet.astro';
 import Link from '../components/Link.astro';
@@ -29,8 +30,33 @@ import thumbsup from "../assets/images/thumbsup.png";
 			  <h2 class="mb-5 text-2xl font-header text-beige">
 				Vi glæder os til at se dig
 			  </h2>
-              <Billet></Billet>
-			
+              <section class="grid grid-cols-2 gap-10">
+                <Billet
+                url="/singleview"
+                cardimage="https://i.imgur.com/6vskIk5.jpeg"
+                  
+                  cardimagealt="1"
+                  cardtitel="Middagsbillet"
+                  cardundertitel="kl. 12.30 – 15.30"
+                  cardtekst="Vinsmagning med 5 vine og tapas"
+                  cardpris="169 kr."
+                  cardbuttontekst="Læg i kurv" 
+                  badgenyt="false"
+                  badgerabat="false"
+                  badgefaatilbage="false"></Billet>
+                  <Billet
+                  url="/singleview"
+                    cardimage="https://i.imgur.com/prikZBE.jpeg"
+                    cardimagealt="1"
+                    cardtitel="Eftermiddagsbillet"
+                    cardundertitel="kl. 16.30 – 19.30"
+                    cardtekst="Vinsmagning med 5 vine og tapas"
+                     cardpris="199 kr."
+                    cardbuttontekst="Læg i kurv" 
+                    badgenyt="true"
+                    badgerabat="false"
+                    badgefaatilbage="false"></Billet>
+              </section>
 			</div>
 		  </div>
 		</div>
