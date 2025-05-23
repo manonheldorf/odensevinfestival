@@ -13,8 +13,19 @@ html {
 
 @theme {
   --color-beige: #fbf5e4;
+  --color-beige-hover: #fdfcf7;
+  --color-beige-focused: #f9f5e7;
+  --color-beige-selected: #e7d59d;
+
   --color-red: #801424;
+  --color-red-hover: #af303b;
+  --color-red-focused: #801424;
+  --color-red-selected: #5d181f;
+
   --color-green: #8c955e;
+  --color-green-hover: #a6ab81;
+  --color-green-focused: #8e9464;
+  --color-green-selected: #565a3d;
 
   --font-display: "mansalva";
   --font-oswald: "oswald";
