@@ -26,10 +26,6 @@ html {
   --color-green-hover: #a6ab81;
   --color-green-focused: #8e9464;
   --color-green-selected: #565a3d;
-
-  --font-display: "mansalva";
-  --font-oswald: "oswald";
-  --font-paragraf: "poppins";
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
@@ -50,5 +46,17 @@ html {
 
 @layer components {
 }
+
 @layer utilities {
+  .font-display {
+    font-family: "Mansalva", sans-serif;
+  }
+
+  .font-paragraf {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .font-header {
+    font-family: "Oswald", sans-serif;
+  }
 }
