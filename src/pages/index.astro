@@ -6,6 +6,67 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Titel">
+
+	<section>
+		<div class="hero min-h-screen relative overflow-hidden">
+		  
+		  {/* Video baggrund */}
+		  <video
+			autoPlay
+			muted
+			loop
+			playsInline
+			class="absolute w-full h-full object-cover z-0"
+		  >
+			<source src="https://i.imgur.com/X8bkhRr.mp4" type="video/mp4" />
+			Din browser understøtter ikke HTML5 video.
+		  </video>
+	  
+		  {/* Header placeres absolut */}
+		  <div class="fixed top-2 p-2 w-full z-50">
+		  </div>
+	  
+		  {/* Overlay */}
+		
+	  
+		  {/* Content */}
+		  <div class="hero-content z-20 relative">
+			<div>
+			  <h1 class="mb-5 text-7xl font-mansalva text-beige">Odense Vinfestival</h1>
+			  <h2 class="mb-5 text-2xl font-header text-beige">
+				25 APRIL 2026
+			  </h2>
+			  <h2 class="mb-5 text-2xl font-header text-beige">
+				Ekstra tekst
+			  </h2>
+			  <Button variant="primary" size="medium">
+				<a href="/travelform">Køb billet nu</a>
+			  </Button>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	  <section class="bg-red pb-8">
+		<h1>HVAD ER ODENSE VINFESTIVAL?</h1>
+		<p>Tekst</p>
+	  </section>
+
+	  <section class="bg-beige pb-8">
+		<h1>HVAD KAN JEG FORVENTE?</h1>
+		<p>Tekst</p>
+	  </section>
+
+	  <section class="bg-green pb-8">
+		<h1>SE ÅRETS VINUDVALG HER</h1>
+		<p>Tekst</p>
+	  </section>
+
+	  <section class="bg-red pb-8">
+		<h1>ÅRETS UDSTILLERE</h1>
+		<p>Tekst</p>
+	  </section>
+
 	<article>
 		<h1>Index overskrift</h1>
 		<Button variant="primary" size="small">Klik!</Button>
