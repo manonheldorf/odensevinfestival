@@ -1,20 +1,49 @@
 ---
 ---
-<div>
-    <div class="navbar bg-red text-beige text-oswald" >
-        <div class="flex-1">
-          <a class="btn btn-ghost text-xl">daisyUI</a>
-        </div>
-        <div class="flex-none">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>KATALOG</a></li>
-            <li><a>UDSTILLERE</a></li>
-            <li><a>GALLERI</a></li>
-            <li><a>KONTAKT</a></li>
-            <li><a>KØB BILLET</a></li>
-            <li>
 
-            </li>
+<header class="navbar bg-white shadow-md px-4 rounded-full">
+  <div class="flex-1">
+    <a class="btn btn-ghost text-xl" href="/">
+      <img src="/logo.svg" alt="">
+    </a>
+  </div>
+
+  <!-- Desktop navigation (skjules på mobil) -->
+  <nav class="hidden lg:flex text-brown font-brico">
+    <ul class="menu menu-horizontal px-1 text-xl ">
+      <li>
+        <details>
+          <summary>Find din rejse</summary>
+          <ul class="bg-white text-brown rounded-t-none p-2 rounded-3xl">
+            <li><a href="/travelform">Guide</a></li>
+            <li><a>Rejselængde</a></li>
+            <li><a>Rejsemål</a></li>
+            <li><a>Vigtigt at vide</a></li>
           </ul>
-        </div>
-      </div></div>
+        </details>
+      </li>
+      <li><a href="/brochure">Brochure</a></li>
+      <li><a>Infomøder</a></li>
+      <li><a>Om os</a></li>
+    </ul>
+  </nav>
+
+  <!-- Mobil burger menu (skjules på desktop) -->
+  <div class="lg:hidden">
+    <div class="dropdown dropdown-end">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </div>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-3xl font-brico text-brown w-52">
+        <li><a>Find din rejse</a></li>
+        <li><a>Brochure</a></li>
+        <li><a>Infomøder</a></li>
+        <li><a>Om os</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
