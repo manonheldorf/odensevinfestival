@@ -1,4 +1,5 @@
 ---
+import Button from '../components/Button.astro';
 ---
 
 <header class="navbar bg-red px-4 ">
@@ -9,13 +10,14 @@
   </div>
 
   <!-- Desktop navigation (skjules på mobil) -->
-  <nav class="hidden lg:flex text-beige text-oswald">
+  <nav class="hidden lg:flex text-beige text-header">
     <ul class="menu menu-horizontal px-1 text-xl ">
      
       <li><a href="/udstiller">KATALOG</a></li>
       <li><a href="/udstiller">UDSTILLERE</a></li>
       <li><a href="/galleri">GALLERI</a></li>
       <li><a href="/kontakt">KONTAKT</a></li>
+      <li><a href="/billetter"><Button variant="secondary" size="small">Køb billet</Button></a></li>
     </ul>
   </nav>
 
