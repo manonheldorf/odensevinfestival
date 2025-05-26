@@ -1,4 +1,20 @@
+<style>
+  @keyframes infinite-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-infinite-scroll {
+    animation: infinite-scroll 20s linear infinite;
+  }
+</style>
+
 <section class="whitespace-nowrap overflow-x-hidden py-4">
+<<<<<<< HEAD
     <!-- Første række af billeder -->
     <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_img]:mx-6">
       <img src="https://i.imgur.com/WduiqWb.jpeg" class="inline-block rounded-xl shadow-md  w-auto" />
@@ -19,3 +35,48 @@
   </section>
 
   
+=======
+  <!-- Første række -->
+  <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_img]:mx-3">
+    <!-- 30 billeder -->
+    <!-- Du kan erstatte links herunder med dine egne -->
+    <img src="https://i.imgur.com/f9GshFj.jpeg" class="inline-block rounded-xl shadow-md w-auto" />
+    <img src="https://i.imgur.com/PDqX6hf.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/loQAhxz.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/GT37Dky.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/H58hCz6.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/FRyia5c.jpeg" class="inline-block rounded-xl shadow-md w-auto" />
+    <img src="https://i.imgur.com/gXyQzkm.jpeg" class="inline-block rounded-xl shadow-md w-auto" />
+    <img src="https://i.imgur.com/TLdLrq2.jpeg" class="inline-block rounded-xl shadow-md w-auto" />
+    <img src="https://i.imgur.com/lWETpjU.jpeg" class="inline-block rounded-xl shadow-md w-auto" />
+    <img src="https://i.imgur.com/VEBYy7S.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/48j9c4c.jpeg" class="inline-block rounded-xl shadow-md w-auto" />
+    <img src="https://i.imgur.com/rRE1BaX.jpeg" class="inline-block rounded-xl shadow-md w-auto" />
+    <img src="https://i.imgur.com/Np333tN.jpeg" class="inline-block rounded-xl shadow-md w-auto" />
+    <img src="https://i.imgur.com/WmqdHgb.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/4yu9noL.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/gzPKhQH.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/wVbzYds.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/2ZQVSmL.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/0tU5fNE.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/5Wq3saa.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/MyC0GvL.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/znsNN6l.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/DdcDja1.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/wwTJZej.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/GKfYCf6.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/oKSXDRF.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/uBlV4Q9.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/QaXTh44.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/fLrpQhQ.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+    <img src="https://i.imgur.com/H5Mn4kC.jpeg" class="inline-block rounded-xl shadow-md w-auto"/>
+  </div>
+
+  <!-- Duplikeret række -->
+  <div class="inline-block animate-infinite-scroll whitespace-nowrap [&_img]:mx-3" aria-hidden="true">
+    <!-- Du kan kopiere samme billeder her igen -->
+    <!-- (For performance, dupliker i JavaScript hvis muligt) -->
+    <!-- ... samme billeder som ovenfor ... -->
+  </div>
+</section>
+>>>>>>> a3b67f2c07603e2506304633cb15d44919c38ffa

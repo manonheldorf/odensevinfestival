@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 <section class="w-full p-6 bg-beige">
+=======
+---
+import Button from '../components/Button.astro';
+---
+
+<section class="max-w-6xl mx-auto p-6 bg-beige">
+>>>>>>> a3b67f2c07603e2506304633cb15d44919c38ffa
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
     
     <!-- Billede til venstre -->
@@ -12,11 +20,11 @@
 
     <!-- Formular til højre -->
     <div class="w-full">
-      <h2 class="text-3xl font-bold mb-6 text-red text-center md:text-left">
-        Tilmeld dig vores nyhedsbrev
-      </h2>
-
+      
       <form class="bg-beige p-8 space-y-6">
+        <h2 class="text-3xl font-bold mb-6 text-red text-center md:text-left">
+          TILMELD DIG VORES NYHEDSBREV
+        </h2>
         <input 
           type="text" 
           name="fornavn" 
@@ -40,13 +48,9 @@
           required
           class="w-full p-5 text-lg border border-red text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 transition"
         />
-
-        <button 
-          type="submit" 
-          class="w-full py-4 text-lg font-semibold bg-red text-white rounded-xl hover:bg-red-800 transition"
-        >
-          TILMELD
-        </button>
+<div class="flex justify-end mt-6">
+       <Button>TILMELD NYHEDSBREV</Button>
+      </div>
       </form>
     </div>
   </div>
