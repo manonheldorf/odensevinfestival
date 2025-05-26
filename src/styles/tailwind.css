@@ -26,18 +26,6 @@ html {
   --color-green-hover: #a6ab81;
   --color-green-focused: #8e9464;
   --color-green-selected: #565a3d;
-
-  /*Infinite scroll animation*/
-  --animate-infinite-scroll: infinite-scroll 25s linear infinite;
-
-  @keyframes infinite-scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
