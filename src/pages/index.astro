@@ -36,11 +36,11 @@ import thumbsup from "../assets/images/thumbsup.png";
 		  {/* Content */}
 		  <div class="hero-content z-20 relative">
 			<div>
-			  <h1 class="mb-5 text-7xl font-display text-beige">Odense Vinfestival</h1>
+			  <h1 class="mb-5 text-4xl sm:text-7xl font-display text-beige">Odense Vinfestival</h1>
 			  <h2 class="mb-5 text-2xl font-header text-beige">
 				25 APRIL 2026
 			  </h2>
-			  <h2 class="mb-5 text-2xl font-header text-beige">
+			  <h2 class="mb-5 text-lg sm:text-2xl font-header text-beige">
 				Sæt kryds i kalenderen og gør dig klar til en eventyrlig vinoplevelse!
 			  </h2>
 			  <Button variant="primary" size="medium">
@@ -51,50 +51,40 @@ import thumbsup from "../assets/images/thumbsup.png";
 		</div>
 	  </section>
 
-	  <section class="">
-		<div class="hero min-h-screen relative overflow-hidden">
-		  
-			{/* img baggrund */}
-		   <img src="https://i.imgur.com/5BvLvaQ.png" alt="billede">
-		
-			{/* Header placeres absolut */}
-			<div class="fixed top-2 p-2 w-full z-50">
-			</div>
-		
-			{/* Overlay */}
-		  
-		
-			{/* Content */}
-			<div class="hero-content z-20 relative">
-			  <div>
-				<h1 class="mb-5 text-7xl font-display text-beige">HVAD ER ODENSE VINFESTIVAL?</h1>
-				<p class="mb-5 text-2xl font-header text-beige">
-					Oplev Vinens Magi til Odense Vinfestival 2026
-					Den 25. april 2026 forvandles den smukke, rustikke GASA-bygning i Odense til et sandt paradis for vinelskere, når Odense Vinfestival åbner dørene.
-				</p>
-				<p class="mb-5 text-2xl font-header text-beige">Her mødes 25 passionerede vinimportører med vine fra både kendte og oversete områder – alt fra sprøde hvidvine til dybe, komplekse rødvine. Glæd dig til at smage over 200 håndplukkede kvalitetsvine, typisk fra små, unikke producenter.</p>
-				<section class="flex flex-auto justify-center gap-10 pt-10">
-				 <Button variant="tertiary" size="medium">TILMELD NYHEDSBREV</Button>
-				 <Button variant="secondary" size="medium">DOWNLOAD VINKATALOG</Button>
-				</section>
-			  </div>
-			</div>
-		  </div>
+	<!-- VINKLATTEN OG NYE CONTENT (sektion 2) -->
+	<section class=" relative z-10 -mt-24 sm:-mt-40 lg:-mt-[470px]">
+		<img
+		  src="https://i.imgur.com/5BvLvaQ.png"
+		  alt="Vinklat"
+		  class="absolute top-0 left-0 w-full h-auto z-0 pointer-events-none"
+		/>
+	  
+		<div class="relative z-10 px-4 sm:px-10 pt-32 sm:pt-52 lg:pt-[560px] pb-16 max-w-6xl mx-auto">
+		  <!-- Content -->
+		   <h1>Odense Vinfestival</h1>
+		</div>
 	  </section>
+	  
+	  
 
-	  <section class="bg-beige pb-8 pt-8 text-red">
-		<Heading htmlheading="h2" size="large" variant="secondary">SE ÅRETS VIN HER</Heading>
+  <section class="bg-red pb-70 pt-8 text-beige">
+
+  </section>
+  
+
+	  <section class="bg-beige pb-8 lg:pt-100 text-red">
+		<Heading htmlheading="h2" size="large" variant="secondary">HVAD KAN DU FORVENTE?</Heading>
 		<section class="flex flex-auto justify-center gap-30">
-			<div>
-				<img src="/importoere.svg" alt="importøre">
+			<div class="">
+				<img class="h-30" src="/importoere.svg" alt="importøre">
 				<p class="pt-5"> 25 passionerede vinimportører</p>
 			</div>
-			<div>
-				<img src="/vin.svg" alt="vin">
+			<div class="">
+				<img class="h-30" src="/vin.svg" alt="vin">
 				<p class="pt-5">Smag 200 forskellige vine</p>
 			</div>
-			<div>
-				<img src="/foredrag.svg" alt="foredrag">
+			<div class="">
+				<img class="h-30" src="/foredrag.svg" alt="foredrag">
 				<p class="pt-5">3 foredrag fra dygtige sommerliere</p>
 			</div>
 		</section>
