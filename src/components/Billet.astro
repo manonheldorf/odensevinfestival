@@ -2,7 +2,7 @@
 import Heading from '../components/Heading.astro';
 import Link from '../components/Link.astro';
 
-const { url="#", cardimage="", cardimagealt="", cardtitel="", cardundertitel="", cardtekst="", cardpris="", cardbuttontekst="",
+const { url="#", cardimage="", cardimagealt="", cardtitel="", cardundertitel="", cardtekst="", cardlist1="", cardlist2="", cardlist3="", cardpris="", cardbuttontekst="",
   badgenyt="false", badgerabat="false", badgefaatilbage="" } = Astro.props;
 ---
 
@@ -15,13 +15,22 @@ const { url="#", cardimage="", cardimagealt="", cardtitel="", cardundertitel="",
        src={cardimage}
        alt={cardimagealt} />
     </figure>
-    <div class="card-body">
+    <div class="card-body text-red">
       <Heading htmlheading="h2" size="medium" Stylingclasses="card-titel">{cardtitel}</Heading>
       <p>{cardundertitel}</p>
-      <p>{cardtekst}</p>
+      <ul>{cardtekst}
+      <p>{cardlist1}</p>
+      <p>{cardlist2}</p>
+      <p>{cardlist3}</p></ul>
+      <div class="grid grid-cols-2 gap-4 pt-5">
+        <div>
       <p>{cardpris}</p>
+    </div>
+    <div>
       <div class="card-actions justify-end">
         <Link href={url} variant="primary" size="small">{cardbuttontekst}</Link>
       </div>
+    </div>
+    </div>
     </div>
   </div>
