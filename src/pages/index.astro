@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Vincard from '../components/Vincard.astro';
 import Heading from '../components/Heading.astro';
 import Link from '../components/Link.astro';
 import Udstiller from '../components/Udstiller.astro';
@@ -8,7 +9,7 @@ import Nyhedsbrev from '../components/Nyhedsbrev.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
+<MainLayout title="Home - Odense Vinfestival">
 
 	<section>
 		<div class="hero min-h-screen relative overflow-hidden">
@@ -40,7 +41,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 				25 APRIL 2026
 			  </h2>
 			  <h2 class="mb-5 text-2xl font-header text-beige">
-				Ekstra tekst
+				Sæt kryds i kalenderen og gør dig klar til en eventyrlig vinoplevelse!
 			  </h2>
 			  <Button variant="primary" size="medium">
 				<a href="/travelform">Køb billet nu</a>
@@ -70,10 +71,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 				<p class="mb-5 text-2xl font-header text-beige">
 					Oplev Vinens Magi til Odense Vinfestival 2026
 					Den 25. april 2026 forvandles den smukke, rustikke GASA-bygning i Odense til et sandt paradis for vinelskere, når Odense Vinfestival åbner dørene.
-					
-					Her mødes 25 passionerede vinimportører med vine fra både kendte og oversete områder – alt fra sprøde hvidvine til dybe, komplekse rødvine. Glæd dig til at smage over 200 håndplukkede kvalitetsvine, typisk fra små, unikke producenter.
 				</p>
-				<section class="grid grid-cols-2 gap-10 pt-10">
+				<p class="mb-5 text-2xl font-header text-beige">Her mødes 25 passionerede vinimportører med vine fra både kendte og oversete områder – alt fra sprøde hvidvine til dybe, komplekse rødvine. Glæd dig til at smage over 200 håndplukkede kvalitetsvine, typisk fra små, unikke producenter.</p>
+				<section class="flex flex-auto justify-center gap-10 pt-10">
 				 <Button variant="tertiary" size="medium">TILMELD NYHEDSBREV</Button>
 				 <Button variant="secondary" size="medium">DOWNLOAD VINKATALOG</Button>
 				</section>
@@ -82,33 +82,64 @@ import thumbsup from "../assets/images/thumbsup.png";
 		  </div>
 	  </section>
 
-	  <section class="bg-beige pb-8 text-red">
-		<h1>HVAD KAN JEG FORVENTE?</h1>
-		<section class="grid grid-cols-3">
+	  <section class="bg-beige pb-8 pt-8 text-red">
+		<Heading htmlheading="h2" size="large" variant="secondary">SE ÅRETS VIN HER</Heading>
+		<section class="flex flex-auto justify-center gap-30">
 			<div>
 				<img src="/importoere.svg" alt="importøre">
-				<p> 25 passionerede vinimportører</p>
+				<p class="pt-5"> 25 passionerede vinimportører</p>
 			</div>
 			<div>
 				<img src="/vin.svg" alt="vin">
-				<p>Smag 200 forskellige vine</p>
+				<p class="pt-5">Smag 200 forskellige vine</p>
 			</div>
 			<div>
 				<img src="/foredrag.svg" alt="foredrag">
-				<p>3 foredrag fra dygtige sommerliere</p>
+				<p class="pt-5">3 foredrag fra dygtige sommerliere</p>
 			</div>
 		</section>
 	  </section>
 
-	  <section class="bg-green pb-8">
-		<h1>SE ÅRETS VINUDVALG HER</h1>
-		<p>Tekst</p>
+	  <section class="bg-green pb-8 pt-8">
+		<Heading htmlheading="h2" size="large" variant="primary">SE ÅRETS VIN HER</Heading>
+		<section class="grid grid-cols-3">
+			<div>
+		<Vincard
+		cardimage="https://i.imgur.com/Gi7V794.jpeg"
+		cardimagealt=""
+		cardtitel=""
+		dropdowntitel="Borsao Classico 2019"
+		dropdowncontent="Borsao Clásico 2019 er en frugtdrevet spansk rødvin fra Campo de Borja, lavet primært på Garnacha. Den har aroma af modne røde bær, en blød og fyldig smag samt en behagelig syre. En alsidig vin, der passer godt til kødretter og oste. God kvalitet til prisen."
+		></Vincard>
+	</div>
+	<div>
+		<Vincard
+		cardimage="https://i.imgur.com/yKfqVJO.jpeg"
+		cardimagealt=""
+		cardtitel=""
+		dropdowntitel="Grand Barossa Shiraz 2017"
+		dropdowncontent="Grand Barossa Shiraz 2017 fra Château Tanunda er en kraftfuld og kompleks rødvin fra Barossa Valley i Australien. Vinen er lavet på 100 % Shiraz-druer og lagret i op til 18 måneder på en kombination af nye og brugte franske og amerikanske egetræsfade, hvilket giver dybde og krydderi "
+		></Vincard>
+	</div>
+	<div>
+		<Vincard
+		cardimage="https://i.imgur.com/KgnH5A1.jpeg"
+		cardimagealt=""
+		cardtitel=""
+		dropdowntitel="Fiagre Campania Bianco 2013"
+		dropdowncontent="Fiagre Campania Bianco 2013 er en hvidvin fra det italienske vinhus Antonio Caggiano i Campania-regionen. Vinen er lavet på en blanding af 70 % Fiano di Avellino og 30 % Greco di Tufo, hvilket giver en kompleks og aromatisk profil med noter af hvide frugter og blomster. Den har en alkoholprocent på 13,5 % og er kendt for sin balance og friskhed."
+		></Vincard>
+	</div>
+	</section>
+	<div class="flex flex-auto justify-center pt-8">
+	<Button variant="primary" size="medium">Download Vinkatalog</Button>
+</div>
 	  </section>
 
-	  <section class="bg-red pb-8">
-		<h1 class="text-beige">ÅRETS UDSTILLERE</h1>
+	  <section class="bg-red pb-8 pt-8">
+		<Heading htmlheading="h2" size="large" variant="primary">SE ÅRETS VIN HER</Heading>
 		<Udstiller></Udstiller>
-		<section class="grid grid-cols-2 gap-10 justify-center pt-8 ">
+		<section class="flex flex-auto gap-10 justify-center pt-8 ">
 			<div>
 		<Button variant="tertiary" size="medium">Download Vinkatalog</Button>
 	</div>

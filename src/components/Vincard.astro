@@ -1,0 +1,23 @@
+---
+import Heading from '../components/Heading.astro';
+import Link from '../components/Link.astro';
+
+const { url="#", cardimage="", cardimagealt="", cardtitel="", dropdowntitel="", dropdowncontent="",
+ } = Astro.props;
+---
+
+<div class="p-8">
+    <figure class="relative rounded-xl">
+      <img class="p-4 rounded-xl h-110 w-full object-cover"
+       src={cardimage}
+       alt={cardimagealt} />
+    </figure>
+    <div class="card-body text-red">
+      <div tabindex="0" class="collapse collapse-arrow bg-beige">
+        <div class="collapse-title font-semibold">{dropdowntitel}</div>
+        <div class="collapse-content text-md">
+            {dropdowncontent}
+        </div>
+      </div>
+    </div>
+  </div>
