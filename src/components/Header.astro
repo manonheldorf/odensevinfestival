@@ -13,7 +13,7 @@ import Heading from '../components/Heading.astro';
 
   <!-- Desktop navigation (skjules på mobil) -->
   <nav class="hidden lg:flex text-beige text-header">
-    <ul class="menu menu-horizontal px-1 text-xl ">
+    <ul class="menu menu-horizontal px-1 text-xl font-header">
       <li><a target="_blank" href="https://odensevinfestival.dk/wp-content/uploads/2025/04/Katalog-v01.pdf">KATALOG</a></li>
       <li><a href="/udstiller">UDSTILLERE</a></li>
       <li><a href="/galleri">GALLERI</a></li>
@@ -33,11 +33,11 @@ import Heading from '../components/Heading.astro';
               stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </div>
-    <ul tabindex="0" class="menu dropdown-content mt-3 z-[1] p-2 bg-red text-header text-beige w-52 rounded-xl shadow-md">
-      <Heading htmlheading="h2" size="small" variant="primary"> <li><a target="_blank" href="https://odensevinfestival.dk/wp-content/uploads/2025/04/Katalog-v01.pdf">KATALOG</a></li></Heading>
-      <Heading htmlheading="h2" size="small" variant="primary"> <li><a href="/udstiller">UDSTILLERE</a></li></Heading>
-      <Heading htmlheading="h2" size="small" variant="primary"><li><a href="/galleri">GALLERI</a></li></Heading>
-      <Heading htmlheading="h2" size="small" variant="primary"><li><a href="/kontakt">KONTAKT</a></li></Heading>
+    <ul tabindex="0" class="menu dropdown-content mt-3 z-[1] p-2 bg-red text-header text-beige w-52 rounded-xl shadow-md font-header">
+       <li><a target="_blank" href="https://odensevinfestival.dk/wp-content/uploads/2025/04/Katalog-v01.pdf">KATALOG</a></li>
+      <li><a href="/udstiller">UDSTILLERE</a></li>
+<li><a href="/galleri">GALLERI</a></li>
+     <li><a href="/kontakt">KONTAKT</a></li>
       
       <div class="flex flex-auto justify-center pt-4">
       <li><a href="/billetter"><Button variant="secondary" size="small">Køb billet</Button></a></li>
