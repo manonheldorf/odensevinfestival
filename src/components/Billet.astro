@@ -16,16 +16,16 @@ const { url="#", cardimage="", cardimagealt="", cardtitel="", cardundertitel="",
        src={cardimage}
        alt={cardimagealt} />
     </figure>
-    <div class="card-body text-red">
-      <Heading htmlheading="h2" size="medium" variant="secondary">{cardtitel}</Heading>
-      <p>{cardundertitel}</p>
-      <ul>{cardtekst}
+    <div class="card-body text-red ">
+      <h2 class="font-header text-3xl">{cardtitel}</h2>
+      <p class="font-pragraf text-lg font-bold">{cardundertitel}</p>
+      <ul class="font-pragraf text-md">{cardtekst}
       <p>{cardlist1}</p>
       <p>{cardlist2}</p>
       <p>{cardlist3}</p></ul>
       <div class="grid grid-cols-2 gap-4 pt-5">
         <div>
-      <p>{cardpris}</p>
+      <p class="font-header text-xl font-bold">{cardpris}</p>
     </div>
     <div>
       <div class="card-actions justify-end">

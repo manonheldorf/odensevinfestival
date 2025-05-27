@@ -11,10 +11,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Køb billet - Odense Vinfestival">
 
 	<section>
-		<div class="hero min-h-screen relative overflow-hidden">
+		<div class="hero min-h-screen relative overflow-hidden bg-cover bg-center bg-no-repeat" style="background-image: url('https://i.imgur.com/g4ygGuW.jpeg');">
 		  
-		  {/* img baggrund */}
-		 <img src="https://i.imgur.com/g4ygGuW.jpeg" alt="billede">
+		 
 	  
 		  {/* Header placeres absolut */}
 		  <div class="fixed top-2 p-2 w-full z-50">
@@ -26,14 +25,14 @@ import thumbsup from "../assets/images/thumbsup.png";
 		  {/* Content */}
 		  <div class="hero-content z-20 relative">
 			<div>
-        <h1 class="text-beige font-display lg:text-7xl md:text-6xl xs:text-5xl pb-8">ODENSE VINFESTIVAL</h1>
-        <h2 class="text-beige font-header lg:text-5xl md:text-3xl md:max-w-100 xs:text-2xl pb-8">VI GLÆDER OS TIL AT SE DIG</h2>
+        <h1 class="text-beige font-display lg:text-7xl md:text-6xl xs:text-6xl xs:pt-8 pb-8">Køb din billet</h1>
+        <h2 class="text-beige font-header lg:text-4xl md:text-3xl md:max-w-100 xs:text-2xl pb-8">VI GLÆDER OS TIL AT SE DIG</h2>
 
-              <section class="lg:grid grid-cols-2 gap-10">
+              <section class="md:grid grid-cols-2 gap-10 ">
+                <div class="xs:pb-8">
                 <Billet
                 url="/singleview"
                 cardimage="https://i.imgur.com/6vskIk5.jpeg"
-                  
                   cardimagealt="1"
                   cardtitel="DAGSBILLET, 25 APRIL 2026"
                   cardundertitel="kl. 12.30 – 15.30"
@@ -46,6 +45,8 @@ import thumbsup from "../assets/images/thumbsup.png";
                   badgenyt="false"
                   badgerabat="false"
                   badgefaatilbage="false"></Billet>
+                </div>
+                <div>
                   <Billet
                   url="/singleview"
                     cardimage="https://i.imgur.com/prikZBE.jpeg"
@@ -61,6 +62,7 @@ import thumbsup from "../assets/images/thumbsup.png";
                     badgenyt="true"
                     badgerabat="false"
                     badgefaatilbage="false"></Billet>
+                  </div>
               </section>
 			</div>
 		  </div>
