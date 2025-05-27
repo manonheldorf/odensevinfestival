@@ -30,6 +30,10 @@ html {
   --font-display: "mansalva";
   --font-header: "oswald";
   --font-paragraf: "poppins";
+
+  --breakpoint-xs: 25rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
