@@ -1,5 +1,6 @@
 ---
 import Heading from '../components/Heading.astro';
+import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 
 const { url="#", cardimage="", cardimagealt="", cardtitel="", cardundertitel="", cardtekst="", cardlist1="", cardlist2="", cardlist3="", cardpris="", cardbuttontekst="",
@@ -16,7 +17,7 @@ const { url="#", cardimage="", cardimagealt="", cardtitel="", cardundertitel="",
        alt={cardimagealt} />
     </figure>
     <div class="card-body text-red">
-      <Heading htmlheading="h2" size="medium" Stylingclasses="card-titel">{cardtitel}</Heading>
+      <Heading htmlheading="h2" size="medium" variant="secondary">{cardtitel}</Heading>
       <p>{cardundertitel}</p>
       <ul>{cardtekst}
       <p>{cardlist1}</p>
@@ -28,7 +29,7 @@ const { url="#", cardimage="", cardimagealt="", cardtitel="", cardundertitel="",
     </div>
     <div>
       <div class="card-actions justify-end">
-        <Link href={url} variant="primary" size="small">{cardbuttontekst}</Link>
+        <Button href={url} variant="primary" size="small">{cardbuttontekst}</Button>
       </div>
     </div>
     </div>
