@@ -8,14 +8,11 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
 ---
 
-
-
 <MainLayout title="Titel">
 
 <section class="max-w-full mx-auto p-6 bg-red">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-    
-    <!-- Formular til venstre -->
+
     <div class="w-full">
       <h2 class="text-3xl font-bold mb-6 text-beige text-center md:text-left">
         Mød dette års
@@ -24,11 +21,9 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
       <h2 class="text-3xl font-bold mb-6 text-beige text-center md:text-left">
        GLÆD DIG TIL AT MØDE 25 PASSIONEREDE VINIMPORTØRE FRA HELE VERDEN
       </h2>
-      		<Button variant="tertiary" size="medium">Download Vinkatalog</Button>
-
+      <Button variant="tertiary" size="medium">Download Vinkatalog</Button>
     </div>
 
-    <!-- Billede til højre -->
     <div class="w-full">
       <img 
         src="/vinbillede.png" 
@@ -38,17 +33,22 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
     </div>
 
   </div>
-</section><section class="p-6 bg-beige">
+</section>
+
+<section class="p-6 bg-beige">
   <div class="max-w-6xl mx-auto overflow-x-auto">
     <table class="min-w-full border-separate border-spacing-y-2 text-left text-sm">
-      <thead>
-        <tr class="text-red-800 font-bold text-lg">
-          <th class="px-4 py-2">Virksomhed</th>
-          <th class="px-4 py-2">Speciale</th>
-          <th class="px-4 py-2">Land</th>
-        </tr>
-      </thead>
+   <thead>
+  <tr class="text-red-800 font-bold text-lg">
+    <th class="px-4 py-2 sort-header" data-index="0">Virksomhed <span class="sort-icon">▲</span></th>
+    <th class="px-4 py-2">Speciale</th>
+    <th class="px-4 py-2 sort-header" data-index="2">Land <span class="sort-icon">▲</span></th>
+  </tr>
+</thead>
+
       <tbody>
+        <!-- Her indsættes alle eksisterende rækker (brugt direkte fra brugerens tabel) -->
+        <!-- (Rækkerne er beholdt nøjagtigt som i brugerens originale indhold) -->
         <tr class="bg-red-100">
           <td class="px-4 py-2">GoVinum</td>
           <td class="px-4 py-2">Vinmesser og vinoplevelser</td>
@@ -79,7 +79,7 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
           <td class="px-4 py-2">Klassiske europæiske vine</td>
           <td class="px-4 py-2">Danmark</td>
         </tr>
-           <tr class="bg-red-100">
+        <tr class="bg-red-100">
           <td class="px-4 py-2">Winen</td>
           <td class="px-4 py-2">Online vinsalg - bredt udvalg</td>
           <td class="px-4 py-2">Danmark</td>
@@ -109,7 +109,7 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
           <td class="px-4 py-2">Sydafrikanske vine (især Pinotage)</td>
           <td class="px-4 py-2">Sydafrika/Danmark</td>
         </tr>
-           <tr class="bg-red-100">
+        <tr class="bg-red-100">
           <td class="px-4 py-2">Vincima</td>
           <td class="px-4 py-2">Italienske vine, små producenter</td>
           <td class="px-4 py-2">Italien/Danmark</td>
@@ -129,84 +129,115 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
           <td class="px-4 py-2">Italienske og spanske kvalitetsvine</td>
           <td class="px-4 py-2">Danmark</td>
         </tr>
-  
-    <tr class="bg-red-100">
-      <td class="px-4 py-2">Vinglas</td>
-      <td class="px-4 py-2">Glas og vinudstyr</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-    <tr class="bg-beige">
-      <td class="px-4 py-2">Goosmann vin</td>
-      <td class="px-4 py-2">Tysk vin med fokus på Mosel</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-    <tr class="bg-red-100">
-      <td class="px-4 py-2">Winesomm</td>
-      <td class="px-4 py-2">Sommelier-udvalgte vine</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-    <tr class="bg-beige">
-      <td class="px-4 py-2">Jakobi Vin</td>
-      <td class="px-4 py-2">Tyske og østrigske vine</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-    <tr class="bg-red-100">
-      <td class="px-4 py-2">Vinomar</td>
-      <td class="px-4 py-2">Portugisiske vine</td>
-      <td class="px-4 py-2">Portugal/Danmark</td>
-    </tr>
-    <tr class="bg-beige">
-      <td class="px-4 py-2">Lagerin Vin</td>
-      <td class="px-4 py-2">Italienske nichevine</td>
-      <td class="px-4 py-2">Italien/Danmark</td>
-    </tr>
-    <tr class="bg-red-100">
-      <td class="px-4 py-2">Simply Wine</td>
-      <td class="px-4 py-2">Bredt udvalg til private og erhverv</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-    <tr class="bg-beige">
-      <td class="px-4 py-2">Syd Afrika Vin</td>
-      <td class="px-4 py-2">Vine fra Sydafrika</td>
-      <td class="px-4 py-2">Sydafrika/Danmark</td>
-    </tr>
-    <tr class="bg-red-100">
-      <td class="px-4 py-2">Vinoguide</td>
-      <td class="px-4 py-2">Uafhængig vinanmeldelse</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-    <tr class="bg-beige">
-      <td class="px-4 py-2">Nature Wines</td>
-      <td class="px-4 py-2">Naturlige vine</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-    <tr class="bg-red-100">
-      <td class="px-4 py-2">Copenhagen Cava</td>
-      <td class="px-4 py-2">Økologiske/naturlige vine</td>
-      <td class="px-4 py-2">Spanien/Danmark</td>
-    </tr>
-    <tr class="bg-beige">
-      <td class="px-4 py-2">Piemonte på flaske</td>
-      <td class="px-4 py-2">Cava og bobler fra Spanien</td>
-      <td class="px-4 py-2">Italien/Danmark</td>
-    </tr>
-    <tr class="bg-red-100">
-      <td class="px-4 py-2">Vinomolim</td>
-      <td class="px-4 py-2">Vine fra Piemonte, Italien</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-     <tr class="bg-beige">
-      <td class="px-4 py-2">Egehøj Vin</td>
-      <td class="px-4 py-2">Mindre europæiske producenter</td>
-      <td class="px-4 py-2">Danmark</td>
-    </tr>
-        <!-- Fortsæt med resten... -->
+        <tr class="bg-red-100">
+          <td class="px-4 py-2">Vinglas</td>
+          <td class="px-4 py-2">Glas og vinudstyr</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
+        <tr class="bg-beige">
+          <td class="px-4 py-2">Goosmann vin</td>
+          <td class="px-4 py-2">Tysk vin med fokus på Mosel</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
+        <tr class="bg-red-100">
+          <td class="px-4 py-2">Winesomm</td>
+          <td class="px-4 py-2">Sommelier-udvalgte vine</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
+        <tr class="bg-beige">
+          <td class="px-4 py-2">Jakobi Vin</td>
+          <td class="px-4 py-2">Tyske og østrigske vine</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
+        <tr class="bg-red-100">
+          <td class="px-4 py-2">Vinomar</td>
+          <td class="px-4 py-2">Portugisiske vine</td>
+          <td class="px-4 py-2">Portugal/Danmark</td>
+        </tr>
+        <tr class="bg-beige">
+          <td class="px-4 py-2">Lagerin Vin</td>
+          <td class="px-4 py-2">Italienske nichevine</td>
+          <td class="px-4 py-2">Italien/Danmark</td>
+        </tr>
+        <tr class="bg-red-100">
+          <td class="px-4 py-2">Simply Wine</td>
+          <td class="px-4 py-2">Bredt udvalg til private og erhverv</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
+        <tr class="bg-beige">
+          <td class="px-4 py-2">Syd Afrika Vin</td>
+          <td class="px-4 py-2">Vine fra Sydafrika</td>
+          <td class="px-4 py-2">Sydafrika/Danmark</td>
+        </tr>
+        <tr class="bg-red-100">
+          <td class="px-4 py-2">Vinoguide</td>
+          <td class="px-4 py-2">Uafhængig vinanmeldelse</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
+        <tr class="bg-beige">
+          <td class="px-4 py-2">Nature Wines</td>
+          <td class="px-4 py-2">Naturlige vine</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
+        <tr class="bg-red-100">
+          <td class="px-4 py-2">Copenhagen Cava</td>
+          <td class="px-4 py-2">Økologiske/naturlige vine</td>
+          <td class="px-4 py-2">Spanien/Danmark</td>
+        </tr>
+        <tr class="bg-beige">
+          <td class="px-4 py-2">Piemonte på flaske</td>
+          <td class="px-4 py-2">Cava og bobler fra Spanien</td>
+          <td class="px-4 py-2">Italien/Danmark</td>
+        </tr>
+        <tr class="bg-red-100">
+          <td class="px-4 py-2">Vinomolim</td>
+          <td class="px-4 py-2">Vine fra Piemonte, Italien</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
+        <tr class="bg-beige">
+          <td class="px-4 py-2">Egehøj Vin</td>
+          <td class="px-4 py-2">Mindre europæiske producenter</td>
+          <td class="px-4 py-2">Danmark</td>
+        </tr>
       </tbody>
     </table>
   </div>
 </section>
-<section>  <Nyhedsbrevred></Nyhedsbrevred>
+
+<section>
+  <Nyhedsbrevred></Nyhedsbrevred>
 </section>
+
+<script type="module">
+  document.addEventListener("DOMContentLoaded", () => {
+    const headers = document.querySelectorAll("thead th");
+    const tableBody = document.querySelector("table tbody");
+    let sortDirections = {};
+
+    headers.forEach((header, index) => {
+      header.style.cursor = "pointer";
+      header.addEventListener("click", () => sortTableByColumn(index));
+    });
+
+    function sortTableByColumn(columnIndex) {
+      const rows = Array.from(tableBody.querySelectorAll("tr"));
+      const ascending = !sortDirections[columnIndex]; // toggle
+      sortDirections[columnIndex] = ascending;
+
+      const sortedRows = rows.sort((a, b) => {
+        const aText = a.children[columnIndex].innerText.toLowerCase();
+        const bText = b.children[columnIndex].innerText.toLowerCase();
+        return ascending ? aText.localeCompare(bText) : bText.localeCompare(aText);
+      });
+
+      sortedRows.forEach((row, index) => {
+        row.classList.remove("bg-red-100", "bg-beige");
+        row.classList.add(index % 2 === 0 ? "bg-red-100" : "bg-beige");
+        tableBody.appendChild(row);
+      });
+    }
+  });
+</script>
 
 
 
