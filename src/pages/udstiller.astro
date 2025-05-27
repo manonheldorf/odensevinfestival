@@ -8,17 +8,17 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
 ---
 
-<MainLayout title="Titel">
+<MainLayout title="Udstillere - Odense Vinfestival">
 
 <section class="max-w-full mx-auto p-6 bg-red">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
     <div class="w-full">
-      <h2 class="text-3xl font-bold mb-6 text-beige text-center md:text-left">
+      <h2 class="text-3xl font-header mb-6 text-beige md:text-left">
         Mød dette års
       </h2>
       <h1 class="mb-5 text-7xl font-display text-beige">Vinudstillere</h1>
-      <h2 class="text-3xl font-bold mb-6 text-beige text-center md:text-left">
+      <h2 class="text-3xl font-header mb-6 text-beige md:text-left">
        GLÆD DIG TIL AT MØDE 25 PASSIONEREDE VINIMPORTØRER FRA HELE VERDEN
       </h2>
       <Button variant="tertiary" size="medium">Download Vinkatalog</Button>
@@ -39,14 +39,14 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
   <div class="max-w-6xl mx-auto overflow-x-auto">
     <table class="min-w-full border-separate border-spacing-y-2 text-left text-sm">
    <thead>
-  <tr class="text-red-800 font-bold text-lg">
-    <th class="px-4 py-2 sort-header" data-index="0">Virksomhed <span class="sort-icon">▲</span></th>
-    <th class="px-4 py-2">Speciale</th>
-    <th class="px-4 py-2 sort-header" data-index="2">Land <span class="sort-icon">▲</span></th>
+  <tr class="text-red font-header text-xl">
+    <th class="px-4 py-2 sort-header" data-index="0">VIRKSOMHED <span class="sort-icon">▲</span></th>
+    <th class="px-4 py-2">SPECIALE</th>
+    <th class="px-4 py-2 sort-header" data-index="2">LAND <span class="sort-icon">▲</span></th>
   </tr>
 </thead>
 
-      <tbody>
+      <tbody class="text-red font-paragraf">
         <!-- Her indsættes alle eksisterende rækker (brugt direkte fra brugerens tabel) -->
         <!-- (Rækkerne er beholdt nøjagtigt som i brugerens originale indhold) -->
         <tr class="bg-red-100">
@@ -202,6 +202,9 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
       </tbody>
     </table>
   </div>
+  <div class="flex flex-auto justify-center pt-8 pb-8">
+  <Button variant="primary" size="medium">Download Vinkatalog</Button>
+</div>
 </section>
 
 <section>

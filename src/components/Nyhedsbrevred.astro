@@ -1,55 +1,61 @@
-<section class="w-full bg-red">
-  <div class="max-w-6xl mx-auto p-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+---
+import Button from '../components/Button.astro';
+import Heading from '../components/Heading.astro';
+---
+
+<section class=" bg-red">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Billede til venstre -->
+    <div class="w-full">
+      <img 
+        src="/vinbillede.png" 
+        alt="Beskrivende tekst" 
+        class="w-full h-auto max-h-[500px] object-cover"
+      />
+    </div>
+
+    <!-- Formular til højre -->
+    <div class="w-full">
       
-      <!-- Billede til venstre -->
-      <div class="w-full">
-        <img 
-          src="/vinbillede.png" 
-          alt="Beskrivende tekst" 
-          class="w-full h-auto max-h-[500px] object-cover"
+      <form class=" space-y-6">
+        <div class="p-12">
+          <h1 class="text-beige font-header lg:text-5xl md:text-4xl xs:text-3xl pb-8">
+            TILMELD DIG VORES NYHEDSBREV HER
+            </h1>
+        <div class="pb-4">
+        <input 
+          type="text" 
+          name="fornavn" 
+          placeholder="Fornavn" 
+          required
+          class="w-full p-4 text-md border border-red text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-red-hover transition shadow-md"
         />
       </div>
-
-      <!-- Formular til højre -->
-      <div class="w-full">
-        <h2 class="text-3xl font-bold mb-6 text-beige text-center md:text-left">
-          Tilmeld dig vores nyhedsbrev
-        </h2>
-
-        <form class="bg-red p-8 space-y-6">
-          <input 
-            type="text" 
-            name="fornavn" 
-            placeholder="Fornavn" 
-            required
-            class="w-full p-5 text-lg border border-beige bg-red text-beige placeholder-beige rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
-          />
-
-          <input 
-            type="text" 
-            name="efternavn" 
-            placeholder="Efternavn" 
-            required
-            class="w-full p-5 text-lg border border-beige bg-red text-beige placeholder-beige rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
-          />
-
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="E-mail" 
-            required
-            class="w-full p-5 text-lg border border-beige bg-red text-beige placeholder-beige rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
-          />
-
-          <button 
-            type="submit" 
-            class="w-full py-4 text-lg font-semibold bg-beige text-red rounded-xl hover:bg-white transition"
-          >
-            TILMELD
-          </button>
-        </form>
+      <div class="pb-4">
+        <input 
+          type="text" 
+          name="efternavn" 
+          placeholder="Efternavn" 
+          required
+          class="w-full p-4 text-md border border-red text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-red-hover transition shadow-md"
+        />
       </div>
+      <div class="pb-4">
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="E-mail" 
+          required
+          class="w-full p-4 text-md border border-red text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-red-hover transition shadow-md"
+        />
+      </div>
+      <div class="flex justify-end">
+             <Button variant="secondary" size="medium">TILMELD NYHEDSBREV</Button>
+            </div>
+      </div>
+      </form>
     </div>
   </div>
 </section>
+
