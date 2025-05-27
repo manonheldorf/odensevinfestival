@@ -10,21 +10,21 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 <MainLayout title="Titel">
     <section class="bg-beige">
         
-        <h1 class="mb-5 text-7xl font-display text-red text-center p-20">kontakt</h1>
+        <h1 class="mb-5 lg:text-7xl font-display text-red text-center p-20   xs:text-3xl">kontakt</h1>
 
          <!-- Formular til højre -->
-      <div class="w-full p-20">
-        <h2 class=" ml-28 text-3xl font-bold mb-6 text-red text-center md:text-left">
+      <div class="w-full p-15">
+        <h2 class=" xs:text-xl  text-3xl font-bold mb-6 text-red text-center md:text-left">
           Hej! har du brug for at komme i kontakt med os?
         </h2>
 
-        <form class="ml-20 p-8 space-y-6">
+        <form class="p-4 space-y-6">
           <input 
             type="text" 
             name="fornavn" 
             placeholder="Hvad hedder du?" 
             required
-            class="w-100 p-5 text-lg border border-red bg-beige text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
+            class="lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red bg-beige text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
           />
 <br>
           <input 
@@ -32,7 +32,7 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
             name="email" 
             placeholder="Hvilken email kan vi skrive tilbage til dig på?" 
             required
-            class=" w-100 p-5 text-lg border border-red text-red bg-beige placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
+            class=" lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red text-red bg-beige placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
           />
 <br>
           <input 
@@ -40,7 +40,7 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
             name="besked" 
             placeholder="Hvad vil du gerne dele med os? ..." 
             required
-            class=" w-100 p-5 text-lg border border-red bg-beige text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
+            class=" lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red bg-beige text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
           />
 <br>
           <button 
