@@ -12,7 +12,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 <MainLayout title="Home - Odense Vinfestival">
 
 	<section>
-		<div class="hero min-h-screen relative overflow-hidden">
+		<div class="min-h-screen relative overflow-hidden">
 		  
 		  {/* Video baggrund */}
 		  <video
@@ -30,26 +30,23 @@ import thumbsup from "../assets/images/thumbsup.png";
 		  <div class="fixed top-2 p-2 w-full z-50">
 		  </div>
 	  
-		  {/* Overlay */}
-		
-	  
 		  {/* Content */}
-		  <div class="hero-content z-20 relative">
+		  <div class="z-20 relative flex justify-start items-start text-left pl-12 pt-70"> {/* VIGTIG LINJE */}
 			<div>
-			  <h1 class="mb-5 text-4xl sm:text-7xl font-display text-beige">Odense Vinfestival</h1>
-			  <h2 class="mb-5 text-2xl font-header text-beige">
-				25 APRIL 2026
-			  </h2>
-			  <h2 class="mb-5 text-lg sm:text-2xl font-header text-beige">
+			  <Heading size="xlarge" variant="primary">ODENSE VINFESTIVAL</Heading>
+			  <Heading size="medium" variant="primary">25 APRIL 2026</Heading>
+			  <Heading size="medium" variant="primary">
 				Sæt kryds i kalenderen og gør dig klar til en eventyrlig vinoplevelse!
-			  </h2>
+			  </Heading>
 			  <Button variant="primary" size="medium">
-				<a href="/travelform">Køb billet nu</a>
+				<a href="/travelform">Køb billet</a>
 			  </Button>
 			</div>
 		  </div>
 		</div>
 	  </section>
+	  
+	  
 
 	<!-- VINKLATTEN OG NYE CONTENT (sektion 2) -->
 	<section class=" relative z-10 -mt-24 sm:-mt-40 lg:-mt-[470px]">
@@ -59,20 +56,22 @@ import thumbsup from "../assets/images/thumbsup.png";
 		  class="absolute top-0 left-0 w-full h-auto z-0 pointer-events-none"
 		/>
 	  
-		<div class="relative z-10 px-4 sm:px-10 pt-32 sm:pt-52 lg:pt-[560px] pb-16 max-w-6xl mx-auto">
+		<div class="relative z-10 px-4 sm:px-10 pt-32 sm:pt-52 lg:pt-[560px] pb-5 max-w-4xl mx-auto">
 		  <!-- Content -->
-		   <h1>Odense Vinfestival</h1>
+		  <Heading size="large" variant="primary">HVAD ER ODENSE VINFESTIVAL?</Heading>
+			<Heading size="small" variant="primary">Den 25. april 2026 forvandles den smukke, rustikke GASA-bygning i Odense til et sandt paradis for vinelskere, når Odense Vinfestival åbner dørene.</Heading>
+			<Heading size="small" variant="primary">Her mødes 25 passionerede vinimportører med vine fra både kendte og oversete områder – alt fra sprøde hvidvine til dybe, komplekse rødvine. Glæd dig til at smage over 200 håndplukkede kvalitetsvine, typisk fra små, unikke producenter med et personligt smageglas.</Heading>
+			<Heading size="small" variant="primary">Du får også adgang til et online smagekatalog med alle vinene og mulighed for at købe dine favorit vine til fordelagtige priser.</Heading>
+			<Heading size="small" variant="primary">Odense Vinfestival er skabt af Foreningen af Danske Vinimportører, så du kan forvente det bedste fra hylderne – i flere prisklasser og fra vinmarker verden over.</Heading>
+			<section class="flex flex-col sm:flex-row gap-15 justify-center pt-15">
+			<Button variant="tertiary" size="medium">TILMELD HYHEDSBREV</Button>
+			<Button variant="secondary" size="medium">DOWNLOAD VINKATALOG</Button>
+		</section>
 		</div>
 	  </section>
 	  
-	  
 
-  <section class="bg-red pb-70 pt-8 text-beige">
-
-  </section>
-  
-
-	  <section class="bg-beige pb-8 lg:pt-100 text-red">
+	  <section class="bg-beige pb-8 lg:pt-80 text-red">
 		<Heading htmlheading="h2" size="large" variant="secondary">HVAD KAN DU FORVENTE?</Heading>
 		<section class="flex flex-auto justify-center gap-30">
 			<div class="">
