@@ -6,18 +6,18 @@ const { url="#", cardimage="", cardimagealt="", cardtitel="", dropdowntitel="", 
  } = Astro.props;
 ---
 
-<div class="p-8">
-    <figure class="relative rounded-xl">
-      <img class="p-4 rounded-xl h-110 w-full object-cover"
-       src={cardimage}
-       alt={cardimagealt} />
+<div class="p-8 w-full">
+  <div class="card ">
+    <figure class="shadow-xl rounded-xl overflow-hidden h-100">
+      <img src={cardimage} alt={cardimagealt} />
     </figure>
-    <div class="card-body text-red">
-      <div tabindex="0" class="collapse collapse-arrow bg-beige">
+    <div class="card-body text-red ">
+      <div tabindex="0" class="collapse collapse-arrow bg-beige shadow-md w-full">
         <div class="collapse-title font-semibold">{dropdowntitel}</div>
         <div class="collapse-content text-md">
             {dropdowncontent}
         </div>
       </div>
     </div>
+  </div>
   </div>
