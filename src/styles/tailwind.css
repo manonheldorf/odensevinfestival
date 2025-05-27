@@ -26,6 +26,10 @@ html {
   --color-green-hover: #a6ab81;
   --color-green-focused: #8e9464;
   --color-green-selected: #565a3d;
+
+  --font-display: "mansalva";
+  --font-header: "oswald";
+  --font-paragraf: "poppins";
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
