@@ -25,7 +25,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 			playsInline
 			class="absolute w-full h-full object-cover z-0"
 		  >
-			<source src="https://i.imgur.com/X8bkhRr.mp4" type="video/mp4" />
+			<source src="https://i.imgur.com/Qx3hfel.mp4" type="video/mp4" />
 			Din browser understøtter ikke HTML5 video.
 		  </video>
 	  
@@ -37,9 +37,11 @@ import thumbsup from "../assets/images/thumbsup.png";
 		  <!-- Content -->
 		  <div class="z-20 relative pl-12 pt-70">
 			<Heading size="xlarge" variant="primary">ODENSE VINFESTIVAL</Heading>
-			<Heading size="small" variant="primary">25 APRIL 2026</Heading>
-			<Heading size="small" variant="primary">Sæt kryds i kalenderen og gør dig klar til en eventyrlig vinoplevelse!</Heading>
+			<Heading size="medium" variant="primary">25 APRIL 2026</Heading>
+			<Heading size="medium" variant="primary">Sæt kryds i kalenderen og gør dig klar til en eventyrlig vinoplevelse!</Heading>
+			<div class="pt-8">
 			<Button variant="primary" size="medium"><a href="/billetter">KØB BILLET</a></Button>
+		</div>
 		  </div>
 		</div>
 	  </section>
@@ -69,22 +71,24 @@ import thumbsup from "../assets/images/thumbsup.png";
 	  </section>
 	  
 
-	  <section class="bg-beige pb-15 lg:pt-80 text-red">
-		<Heading htmlheading="h2" space="normal" size="large" variant="secondary">HVAD KAN DU FORVENTE?</Heading>
+	  <section class="bg-beige" >
+		  <section class="pb-15 lg:pt-80 text-red">
+		  <Heading htmlheading="h2" space="normal" size="large" variant="secondary">HVAD KAN DU FORVENTE?</Heading>
 		<section class="flex flex-auto justify-center gap-30 pt-8">
-			<div class="">
-				<img class="h-30" src="/importoere.svg" alt="importøre">
-				<p class="pt-5"> 25 passionerede vinimportører</p>
-			</div>
-			<div class="">
-				<img class="h-30" src="/vin.svg" alt="vin">
-				<p class="pt-5">Smag 200 forskellige vine</p>
-			</div>
-			<div class="">
-				<img class="h-30" src="/foredrag.svg" alt="foredrag">
-				<p class="pt-5">3 foredrag fra dygtige sommerliere</p>
-			</div>
+		  <div class="flex flex-col items-center text-center">
+			<img class="h-30" src="/importoere.svg" alt="importører">
+			<p class="pt-5">25 passionerede vinimportører</p>
+		  </div>
+		  <div class="flex flex-col items-center text-center">
+			<img class="h-30" src="/vin.svg" alt="vin">
+			<p class="pt-5">Smag 200 forskellige vine</p>
+		  </div>
+		  <div class="flex flex-col items-center text-center">
+			<img class="h-30" src="/foredrag.svg" alt="foredrag">
+			<p class="pt-5">3 foredrag fra dygtige sommerliere</p>
+		  </div>
 		</section>
+	</section>
 	  </section>
 
 	  <section class="bg-green pb-15 pt-15">
