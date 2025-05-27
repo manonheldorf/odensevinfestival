@@ -13,8 +13,11 @@ import thumbsup from "../assets/images/thumbsup.png";
 
 	<section>
 		<div class="min-h-screen relative overflow-hidden">
-		  
-		  {/* Video baggrund */}
+	  
+		  <!-- Vinflaske -->
+		  <img src="/vinflaske.svg" alt="vinflaske" class="absolute top-0 left-290 z-10 w-48 md:w-64 lg:w-72 pointer-events-none" />
+	  
+		  <!-- Video baggrund -->
 		  <video
 			autoPlay
 			muted
@@ -26,22 +29,17 @@ import thumbsup from "../assets/images/thumbsup.png";
 			Din browser understøtter ikke HTML5 video.
 		  </video>
 	  
-		  {/* Header placeres absolut */}
+		  <!-- Header -->
 		  <div class="fixed top-2 p-2 w-full z-50">
+			
 		  </div>
 	  
-		  {/* Content */}
-		  <div class="z-20 relative flex justify-start items-start text-left pl-12 pt-70"> {/* VIGTIG LINJE */}
-			<div>
-			  <Heading size="xlarge" variant="primary">ODENSE VINFESTIVAL</Heading>
-			  <Heading size="medium" variant="primary">25 APRIL 2026</Heading>
-			  <Heading size="medium" variant="primary">
-				Sæt kryds i kalenderen og gør dig klar til en eventyrlig vinoplevelse!
-			  </Heading>
-			  <Button variant="primary" size="medium">
-				<a href="/travelform">Køb billet</a>
-			  </Button>
-			</div>
+		  <!-- Content -->
+		  <div class="z-20 relative pl-12 pt-70">
+			<Heading size="xlarge" variant="primary">ODENSE VINFESTIVAL</Heading>
+			<Heading size="small" variant="primary">25 APRIL 2026</Heading>
+			<Heading size="small" variant="primary">Sæt kryds i kalenderen og gør dig klar til en eventyrlig vinoplevelse!</Heading>
+			<Button variant="primary" size="medium"><a href="/billetter">KØB BILLET</a></Button>
 		  </div>
 		</div>
 	  </section>
@@ -64,16 +62,16 @@ import thumbsup from "../assets/images/thumbsup.png";
 			<Heading size="small" variant="primary">Du får også adgang til et online smagekatalog med alle vinene og mulighed for at købe dine favorit vine til fordelagtige priser.</Heading>
 			<Heading size="small" variant="primary">Odense Vinfestival er skabt af Foreningen af Danske Vinimportører, så du kan forvente det bedste fra hylderne – i flere prisklasser og fra vinmarker verden over.</Heading>
 			<section class="flex flex-col sm:flex-row gap-15 justify-center pt-15">
-			<Button variant="tertiary" size="medium">TILMELD HYHEDSBREV</Button>
-			<Button variant="secondary" size="medium">DOWNLOAD VINKATALOG</Button>
+			<Button variant="tertiary" size="medium"><a href="#nyhedsbrev">TILMELD HYHEDSBREV</a></Button>
+			<Button variant="secondary" size="medium"><a target="_blank" href="https://odensevinfestival.dk/wp-content/uploads/2025/04/Katalog-v01.pdf">DOWNLOAD VINKATALOG</a></Button>
 		</section>
 		</div>
 	  </section>
 	  
 
-	  <section class="bg-beige pb-8 lg:pt-80 text-red">
-		<Heading htmlheading="h2" size="large" variant="secondary">HVAD KAN DU FORVENTE?</Heading>
-		<section class="flex flex-auto justify-center gap-30">
+	  <section class="bg-beige pb-15 lg:pt-80 text-red">
+		<Heading htmlheading="h2" space="normal" size="large" variant="secondary">HVAD KAN DU FORVENTE?</Heading>
+		<section class="flex flex-auto justify-center gap-30 pt-8">
 			<div class="">
 				<img class="h-30" src="/importoere.svg" alt="importøre">
 				<p class="pt-5"> 25 passionerede vinimportører</p>
@@ -89,8 +87,8 @@ import thumbsup from "../assets/images/thumbsup.png";
 		</section>
 	  </section>
 
-	  <section class="bg-green pb-8 pt-8">
-		<Heading htmlheading="h2" size="large" variant="primary">SE ÅRETS VIN HER</Heading>
+	  <section class="bg-green pb-15 pt-15">
+		<Heading htmlheading="h2" space="normal" size="large" variant="primary">SE ÅRETS VIN HER</Heading>
 		<section class="grid grid-cols-3">
 			<div>
 		<Vincard
@@ -121,25 +119,25 @@ import thumbsup from "../assets/images/thumbsup.png";
 	</div>
 	</section>
 	<div class="flex flex-auto justify-center pt-8">
-	<Button variant="primary" size="medium">Download Vinkatalog</Button>
+	<Button variant="primary" size="medium"><a href="https://odensevinfestival.dk/wp-content/uploads/2025/04/Katalog-v01.pdf">Download Vinkatalog</a></Button>
 </div>
 	  </section>
 
-	  <section class="bg-red pb-8 pt-8">
-		<Heading htmlheading="h2" size="large" variant="primary">SE ÅRETS VIN HER</Heading>
+	  <section class="bg-red pb-15 pt-15">
+		<Heading htmlheading="h2" size="large" space="normal" variant="primary">SE ÅRETS VIN HER</Heading>
 		<Udstiller></Udstiller>
 		<section class="flex flex-auto gap-10 justify-center pt-8 ">
 			<div>
-		<Button variant="tertiary" size="medium">Download Vinkatalog</Button>
+		<Button variant="tertiary" size="medium"><a href="https://odensevinfestival.dk/wp-content/uploads/2025/04/Katalog-v01.pdf">Download Vinkatalog</a></Button>
 	</div>
 	<div>
-		<Button variant="secondary" size="medium">Læs mere</Button>
+		<Button variant="secondary" size="medium"><a href="/udstiller">Læs mere</a></Button>
 	</div>
 		</section>
 
 	  </section>
 
-	  <section class="bg-beige">
+	  <section id="nyhedsbrev" class="bg-beige">
 		<Nyhedsbrev></Nyhedsbrev>
 	  </section>
 
