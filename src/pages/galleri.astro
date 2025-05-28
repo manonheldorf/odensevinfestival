@@ -8,58 +8,63 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
 ---
 
-<MainLayout title="Galleri - Odense Vinfestival"><section class="w-full bg-beige">
-    <div class="max-w-6xl mx-auto p-6">
-      <h1 class="mb-5 text-7xl font-display text-red text-center">Galleri fra 2025</h1>
-
-      <div class="grid grid-cols-2 gap-4 md:grid-cols-4 w-full bg-beige">
-        <div class="grid gap-4">
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri1.jpg" alt="Galleri billede 1" />
+<MainLayout title="Galleri - Odense Vinfestival">
+  <section class="bg-beige">
+    <div class="max-w-4xl mx-auto px-4"> <!-- max width + centrering + lidt padding -->
+      <h1 class="text-7xl font-display text-red text-center fade-up pt-8 pb-12">Galleri fra 2025</h1>
+  
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-3 content-center fade-up">
+        <div>
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri1.jpg" alt="Galleri billede 1" />
           </div>
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri2.jpg" alt="Galleri billede 2" />
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri2.jpg" alt="Galleri billede 2" />
           </div>
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri3.jpg" alt="Galleri billede 3" />
-          </div>
-        </div>
-
-        <div class="grid gap-4">
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri4.jpg" alt="Galleri billede 4" />
-          </div>
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri5.jpg" alt="Galleri billede 5" />
-          </div>
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri6.jpg" alt="Galleri billede 6" />
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri3.jpg" alt="Galleri billede 3" />
           </div>
         </div>
-
-        <div class="grid gap-4">
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri7.jpg" alt="Galleri billede 7" />
+  
+        <div class="pb-6">
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri4.jpg" alt="Galleri billede 4" />
           </div>
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri8.jpg" alt="Galleri billede 8" />
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri5.jpg" alt="Galleri billede 5" />
           </div>
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri9.png" alt="Galleri billede 9" />
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri6.jpg" alt="Galleri billede 6" />
           </div>
         </div>
-
-        <div class="grid gap-4">
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri10.png" alt="Galleri billede 10" />
+  
+        <div>
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri7.jpg" alt="Galleri billede 7" />
           </div>
-          <div>
-            <img loading="lazy" class="h-auto max-w-full  object-cover object-center" src="/galleri11.png" alt="Galleri billede 11" />
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri8.jpg" alt="Galleri billede 8" />
+          </div>
+          <div class="pb-6">
+            <img loading="lazy" class="h-auto max-w-full object-cover object-center" src="/galleri9.png" alt="Galleri billede 9" />
           </div>
         </div>
       </div>
     </div>
   </section>
+  
+  
 <section>
   <Nyhedsbrevred></Nyhedsbrevred>
 </section>
+
+<style>
+	.fade-up {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.fade-up.animate {
+  opacity: 1;
+  animation: fadeInUp 3s;
+}
+</style>
