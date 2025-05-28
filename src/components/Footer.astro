@@ -1,19 +1,74 @@
 ---
 ---
 <section class="bg-red pt-15 pb-15 text-beige">
-    <div class="container mx-auto ">
-        <div class="md:grid grid-cols-3">
+  <div class="container mx-auto">
+    <div class="flex flex-wrap md:flex-nowrap items-start gap-8">
 
-            <div> <a href="/"><img src="/Logo.svg" alt="LOGO"></a></div>
+      <!-- Logo til venstre -->
+      <div class="shrink-0">
+        <a href="/">
+          <img src="/Logo.svg" alt="LOGO" class="w-32 md:w-40"/>
+        </a>
+      </div>
 
-            <div><p>Foreningen af Danske Vinimportører  <br> CVR: 34172471  <br> Vejlegårdsvej 8  <br> 2665 Vallensbæk Strand </p></div>
+      <!-- Alt andet samlet og rykket til højre -->
+      <div class="flex flex-wrap gap-8 ml-auto">
 
-            <div>
-              <a href="/kontakt"> <p>Kontakt</p></a>
-              <a href="https://odensevinfestival.dk/betingelsert"> <p>Betingelser</p></a>
-              <a href="/"> <p>Nyhedsbrev</p></a>
-            </div>
+        <!-- Kontaktinfo -->
+        <div>
+          <h2 class="font-oswald text-lg font-bold">Telefon nummer:</h2>
+          <p class="font-oswald text-lg">+45 12 34 56 78</p>
+
+          <h2 class="font-oswald text-lg font-bold mt-4">Mail</h2>
+          <p class="font-oswald text-lg">odensevinfestival@kontakt.dk</p>
+
+          <h2 class="font-oswald text-lg font-bold mt-4">Adresse</h2>
+          <p class="font-oswald text-lg">Vejlegårdsvej 8</p>
+          <p class="font-oswald text-lg">2665 Vallensbæk Strand</p>
         </div>
-    </div>
-</section>
 
+        <!-- Links -->
+        <div class="space-y-2">
+          <a href="/kontakt"><p>Kontakt</p></a>
+          <a href="https://odensevinfestival.dk/betingelsert"><p>Betingelser</p></a>
+          <a href="/kontakt"><p>Nyhedsbrev</p></a>
+        </div>
+
+        <!-- Forening -->
+        <div>
+          <p>
+            Foreningen af Danske Vinimportører<br />
+            CVR: 34172471<br />
+            Vejlegårdsvej 8<br />
+            2665 Vallensbæk Strand
+          </p>
+        </div>
+
+     <!-- Sociale medier -->
+<div class="flex flex-col items-start space-y-4">
+  <!-- Facebook -->
+  <a href="https://facebook.com" target="_blank"
+    class="inline-flex items-center justify-center w-10 h-10 bg-beige rounded-md shadow-md hover:bg-white transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#7E1212]" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.692v-3.622h3.129V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.312h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z" />
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://instagram.com" target="_blank"
+    class="inline-flex items-center justify-center w-10 h-10 bg-beige rounded-md shadow-md hover:bg-white transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#7E1212]" fill="currentColor" viewBox="0 0 24 24">
+      <path
+        d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.058 2.003.25 2.466.415a4.92 4.92 0 0 1 1.675 1.092 4.918 4.918 0 0 1 1.092 1.675c.165.463.357 1.26.415 2.466.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.058 1.206-.25 2.003-.415 2.466a4.928 4.928 0 0 1-1.092 1.675 4.928 4.928 0 0 1-1.675 1.092c-.463.165-1.26.357-2.466.415-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.206-.058-2.003-.25-2.466-.415a4.92 4.92 0 0 1-1.675-1.092 4.92 4.92 0 0 1-1.092-1.675c-.165-.463-.357-1.26-.415-2.466C2.175 15.747 2.163 15.368 2.163 12s.012-3.584.07-4.85c.058-1.206.25-2.003.415-2.466a4.92 4.92 0 0 1 1.092-1.675 4.92 4.92 0 0 1 1.675-1.092c.463-.165 1.26-.357 2.466-.415C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.736 0 8.332.012 7.052.07 5.748.128 4.751.313 3.905.635a6.918 6.918 0 0 0-2.51 1.636A6.918 6.918 0 0 0 .635 4.78C.313 5.626.128 6.623.07 7.927.012 9.207 0 9.611 0 12s.012 2.793.07 4.073c.058 1.304.243 2.301.565 3.147a6.918 6.918 0 0 0 1.636 2.51 6.918 6.918 0 0 0 2.51 1.636c.846.322 1.843.507 3.147.565C8.332 23.988 8.736 24 12 24s3.668-.012 4.948-.07c1.304-.058 2.301-.243 3.147-.565a6.918 6.918 0 0 0 2.51-1.636 6.918 6.918 0 0 0 1.636-2.51c.322-.846.507-1.843.565-3.147.058-1.28.07-1.684.07-4.948s-.012-3.668-.07-4.948c-.058-1.304-.243-2.301-.565-3.147a6.918 6.918 0 0 0-1.636-2.51 6.918 6.918 0 0 0-2.51-1.636c-.846-.322-1.843-.507-3.147-.565C15.668.012 15.264 0 12 0z" />
+      <path
+        d="M12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z" />
+    </svg>
+  </a>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</section>

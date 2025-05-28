@@ -1,0 +1,66 @@
+---
+import Button from '../components/Button.astro';
+import Heading from '../components/Heading.astro';
+---
+
+<section class="bg-green">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Billede til venstre -->
+    <div class="w-full">
+      <img 
+        src="/vinbillede.png" 
+        alt="Beskrivende tekst" 
+        class="w-full h-auto max-h-[500px] object-cover"
+      />
+    </div>
+
+    <!-- Formular til højre -->
+    <div class="w-full">
+      <form class="space-y-6">
+        <div class="p-12">
+          <h1 class="text-beige font-header lg:text-5xl md:text-4xl xs:text-3xl pb-8">
+            TILMELD DIG VORES NYHEDSBREV HER
+          </h1>
+
+          <div class="pb-4">
+            <input 
+              type="text" 
+              name="fornavn" 
+              placeholder="Fornavn" 
+              required
+              class="w-full p-4 text-md border border-green text-green placeholder-green rounded-xl focus:outline-none focus:ring-2 focus:ring-green-hover transition shadow-md"
+            />
+          </div>
+
+          <div class="pb-4">
+            <input 
+              type="text" 
+              name="efternavn" 
+              placeholder="Efternavn" 
+              required
+              class="w-full p-4 text-md border border-green text-green placeholder-green rounded-xl focus:outline-none focus:ring-2 focus:ring-green-hover transition shadow-md"
+            />
+          </div>
+
+          <div class="pb-4">
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="E-mail" 
+              required
+              class="w-full p-4 text-md border border-green text-green placeholder-green rounded-xl focus:outline-none focus:ring-2 focus:ring-green-hover transition shadow-md"
+            />
+          </div>
+
+          <div class="flex justify-end">
+            <Button variant="secondary" size="medium">TILMELD NYHEDSBREV</Button>
+          </div>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+</section>
+
+

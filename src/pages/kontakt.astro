@@ -5,49 +5,99 @@ import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import Nyhedsbrevgreen from "../components/Nyhedsbrevgreen.astro";
 ---
 
 <MainLayout title="Kontakt - Odense Vinfestival">
     <section class="bg-beige">
-        
-        <h1 class="mb-5 lg:text-7xl font-display text-red text-center p-20   xs:text-3xl">kontakt</h1>
+  <h1 class="mb-5 lg:text-7xl font-display text-red text-center p-20 xs:text-3xl">kontakt os</h1>
 
-         <!-- Formular til højre -->
-      <div class="w-full p-15">
-        <h2 class=" xs:text-xl  text-3xl  font-oswald font-bold mb-6 text-red text-center md:text-left">
-          Hej! har du brug for at komme i kontakt med os?
-        </h2>
+  <!-- Flex container til at holde både formular og tekstsektion -->
+  <div class="flex flex-col md:flex-row w-full p-8 gap-8">
+    
+    <!-- Formular til venstre -->
+    <div class="w-full md:w-1/2 p-4">
+      <h2 class="xs:text-xl text-3xl font-oswald font-bold mb-6 text-red text-center md:text-left">
+        Hej! har du brug for at komme i kontakt med os?
+      </h2>
 
-        <form class="p-4 space-y-6">
-          <input 
-            type="text" 
-            name="fornavn" 
-            placeholder="Hvad hedder du?" 
-            required
-            class="lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red bg-beige text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
-          />
-<br>
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="Hvilken email kan vi skrive tilbage til dig på?" 
-            required
-            class=" lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red text-red bg-beige placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
-          />
-<br>
-          <input 
-            type="text" 
-            name="besked" 
-            placeholder="Hvad vil du gerne dele med os? ..." 
-            required
-            class=" lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red bg-beige text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
-          />
-<br>
-          <Button variant="primary" size="medium">INDSEND</Button>
-        </form>
+      <form class="p-4 space-y-6">
+        <input 
+          type="text" 
+          name="fornavn" 
+          placeholder="Hvad hedder du?" 
+          required
+          class="lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red bg-beige text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
+        />
+        <br>
+        <input 
+          type="email" 
+          name="email" 
+          placeholder="Hvilken email kan vi skrive tilbage til dig på?" 
+          required
+          class="lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red text-red bg-beige placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
+        />
+        <br>
+        <input 
+          type="text" 
+          name="besked" 
+          placeholder="Hvad vil du gerne dele med os? ..." 
+          required
+          class="lg:w-100 xs:w-80 p-5 xs:text-xs lg:text-lg border border-red bg-beige text-red placeholder-red rounded-xl focus:outline-none focus:ring-2 focus:ring-beige transition"
+        />
+        <br>
+        <Button variant="primary" size="medium">INDSEND</Button>
+      </form>
+    </div>
+
+    <!-- Tekstsektion til højre -->
+<div class="w-full md:w-1/2 p-4 flex items-center justify-center">
+  <div class="max-w-md text-red font-oswald text-lg leading-relaxed space-y-14">
+    
+    <!-- Telefon nummer -->
+    <div class="flex items-start gap-3">
+     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+</svg>
+      <div>
+        <h2 class="font-oswald text-lg font-bold">Telefon nummer:</h2>
+        <h2 class="font-oswald text-lg">+45 12 34 56 78</h2>
       </div>
+    </div>
 
-    <Nyhedsbrev></Nyhedsbrev>
+    <!-- Telefontid -->
+    <div class="flex items-start gap-3">
+      <svg class="w-6 h-6 text-red mt-1" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 6v6l3.75 3.75M12 2.25a9.75 9.75 0 100 19.5 9.75 9.75 0 000-19.5z" />
+      </svg>
+      <div>
+        <h2 class="font-oswald text-lg font-bold">Telefontid:</h2>
+        <h2 class="font-oswald text-lg">Hverdage 9.00 – 15.00</h2>
+      </div>
+    </div>
+
+    <!-- E-mail -->
+    <div class="flex items-start gap-3">
+      <svg class="w-6 h-6 text-red mt-1" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3 8.25V6a1.5 1.5 0 011.5-1.5h15A1.5 1.5 0 0121 6v2.25M3 8.25l9 6.75 9-6.75M3 8.25V18a1.5 1.5 0 001.5 1.5h15A1.5 1.5 0 0021 18V8.25" />
+      </svg>
+      <div>
+        <h2 class="font-oswald text-lg font-bold">E-Mail:</h2>
+        <h2 class="font-oswald text-lg">odensevinfestival@kontakt.dk</h2>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</section>
+
+ <section><Nyhedsbrevgreen /></section>
 
 	
 	</section>
