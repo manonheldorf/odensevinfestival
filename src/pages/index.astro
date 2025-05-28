@@ -36,10 +36,14 @@ import thumbsup from "../assets/images/thumbsup.png";
 	  
 		  <!-- Content -->
 		  <div class="z-20 relative pl-12 lg:pt-70 xs:pt-50">
-			<h1 class="text-beige font-display lg:text-8xl md:text-7xl xs:text-6xl pb-8">Odense Vinfestival</h1>
-			<h2 class="text-beige font-header lg:text-5xl md:text-3xl md:max-w-100 xs:text-2xl pb-8">25 APRIL 2026</h2>
-			<h2 class="text-beige font-header lg:text-2xl lg:max-w-150 md:text-xl md:max-w-100 xs:text-xl xs:max-w-90  pb-8">SÆT KRYDS I KALENDEREN OG GØR DIG KLAR TIL EN EVENTYRLIG VINOPLEVELSE!</h2>
-			<div class="">
+			<h1 class="text-beige font-display lg:text-8xl md:text-7xl xs:text-6xl pb-8 fade-up">Odense Vinfestival</h1>
+			<div>
+			<h2 class="text-beige font-header lg:text-5xl md:text-3xl md:max-w-100 xs:text-2xl pb-8 fade-up">25 APRIL 2026</h2>
+		</div>
+		<div>
+			<h2 class="text-beige font-header lg:text-2xl lg:max-w-150 md:text-xl md:max-w-100 xs:text-xl xs:max-w-90 pb-8 fade-up">SÆT KRYDS I KALENDEREN OG GØR DIG KLAR TIL EN EVENTYRLIG VINOPLEVELSE!</h2>
+		</div>
+			<div class="fade-up">
 			<Button variant="primary" size="medium"><a href="/billetter">KØB BILLET</a></Button>
 		</div>
 		  </div>
@@ -57,7 +61,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 	  class="hidden lg:block absolute top-0 left-0 w-full h-auto z-0 pointer-events-none"
 	/>
   
-	<div class="relative z-10 px-4 sm:px-10 pt-32 sm:pt-52 lg:pt-[560px] pb-5 max-w-4xl mx-auto">
+	<div class="relative z-10 px-4 sm:px-10 pt-32 sm:pt-52 lg:pt-[560px] pb-5 max-w-4xl mx-auto fade-up">
 	  <!-- Content -->
 	  <h1 class="text-beige font-header lg:text-5xl md:text-4xl xs:text-3xl pb-8">
 		HVAD ER ODENSE VINFESTIVAL?
@@ -76,23 +80,23 @@ import thumbsup from "../assets/images/thumbsup.png";
   
 	  
 
-  <section class="bg-beige">
-	<section class="pb-15 lg:pt-80 text-red xs:pt-12">
+  <section class="bg-beige ">
+	<section class="pb-15 lg:pt-80 text-red xs:pt-12 ">
 	  <h1 class="text-red font-header lg:text-5xl md:text-4xl xs:text-3xl pb-8 text-center">
 		HVAD KAN JEG FORVENTE?
 	  </h1>
   
 	  <!-- Flex container med responsive retning -->
 	  <section class="flex flex-col lg:flex-row items-center justify-center gap-10 pt-8 px-4 font-paragraf font-bold">
-		<div class="flex flex-col items-center text-center max-w-xs">
+		<div class="flex flex-col items-center text-center max-w-xs fade-up">
 		  <img class="h-30" src="/importoere.svg" alt="importører">
 		  <p class="pt-5">25 passionerede vinimportører</p>
 		</div>
-		<div class="flex flex-col items-center text-center max-w-xs">
+		<div class="flex flex-col items-center text-center max-w-xs fade-up">
 		  <img class="h-30" src="/vin.svg" alt="vin">
 		  <p class="pt-5">Smag 200 forskellige vine</p>
 		</div>
-		<div class="flex flex-col items-center text-center max-w-xs">
+		<div class="flex flex-col items-center text-center max-w-xs fade-up">
 		  <img class="h-30" src="/foredrag.svg" alt="foredrag">
 		  <p class="pt-5">3 foredrag fra dygtige sommerliere</p>
 		</div>
@@ -102,7 +106,7 @@ import thumbsup from "../assets/images/thumbsup.png";
   
 
 	  <section class="bg-green pb-15 pt-15">
-		<h1 class="text-beige font-header pl-8 lg:text-5xl md:text-4xl xs:text-3xl pb-8">
+		<h1 class="text-beige font-header pl-8 lg:text-5xl md:text-4xl xs:text-3xl pb-8 fade-up">
 			SE ÅRETS VINUDVALG HER
 		  </h1>
 		<section class="lg:grid grid-cols-3">
@@ -140,7 +144,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 	  </section>
 
 	  <section class="bg-red pb-15 pt-15">
-		<h1 class="text-beige font-header pl-8 lg:text-5xl md:text-4xl xs:text-3xl pb-8">
+		<h1 class="text-beige font-header pl-8 lg:text-5xl md:text-4xl xs:text-3xl pb-8 fade-up">
 			SE ÅRETS UDSTILLERE HER
 		  </h1>
 		<Udstiller></Udstiller>
@@ -160,4 +164,33 @@ import thumbsup from "../assets/images/thumbsup.png";
 		<Nyhedsbrev></Nyhedsbrev>
 	  </section>
 
+	  <script>
+		const observer = new IntersectionObserver((entries) => {
+		  entries.forEach(entry => {
+			if (entry.isIntersecting) {
+			  entry.target.classList.add('animate');
+			  observer.unobserve(entry.target); // kun én gang
+			}
+		  });
+		});
+	  
+		document.querySelectorAll('.fade-up').forEach(el => {
+		  observer.observe(el);
+		});
+	  </script>
+
 </MainLayout>
+
+<style>
+	.fade-up {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.fade-up.animate {
+  opacity: 1;
+  animation: fadeInUp 3s;
+}
+</style>
+
+
+  
