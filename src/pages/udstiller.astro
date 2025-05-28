@@ -13,7 +13,7 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
 <section class="max-w-full mx-auto p-6 bg-red">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
 
-    <div class="w-full">
+    <div class="w-full fade-up">
       <h2 class="text-3xl font-header mb-6 text-beige md:text-left">
         Mød dette års
       </h2>
@@ -35,8 +35,8 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
   </div>
 </section>
 
-<section class="p-6 bg-beige">
-  <div class="max-w-6xl mx-auto overflow-x-auto">
+<section class="p-6 bg-beige ">
+  <div class="max-w-6xl mx-auto overflow-x-auto fade-up">
     <table class="min-w-full border-separate border-spacing-y-2 text-left text-sm">
    <thead>
   <tr class="text-red font-header text-xl">
@@ -245,3 +245,14 @@ import Nyhedsbrevred from '../components/Nyhedsbrevred.astro';
 
 
 </MainLayout>
+
+<style>
+	.fade-up {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.fade-up.animate {
+  opacity: 1;
+  animation: fadeInUp 3s;
+}
+</style>

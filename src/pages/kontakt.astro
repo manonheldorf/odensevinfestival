@@ -10,18 +10,18 @@ import Nyhedsbrevgreen from "../components/Nyhedsbrevgreen.astro";
 
 <MainLayout title="Kontakt - Odense Vinfestival">
     <section class="bg-beige">
-  <h1 class="mb-5 lg:text-7xl font-display text-red text-center p-20 xs:text-3xl">Kontakt os</h1>
+  <h1 class="mb-5 lg:text-7xl font-display text-red text-center p-20 xs:text-3xl fade-up">Kontakt os</h1>
 
   <!-- Flex container til at holde både formular og tekstsektion -->
   <div class="flex flex-col md:flex-row w-full p-8 gap-8">
     
     <!-- Formular til venstre -->
     <div class="w-full md:w-1/2 p-4">
-      <h2 class="xs:text-xl text-3xl font-oswald font-bold mb-6 text-red text-center md:text-left">
+      <h2 class="xs:text-xl text-3xl font-oswald font-bold mb-6 text-red text-center md:text-left fade-up">
         Hej! har du brug for at komme i kontakt med os?
       </h2>
 
-      <form class="p-4 space-y-6">
+      <form class="p-4 space-y-6 fade-up">
         <input 
           type="text" 
           name="fornavn" 
@@ -51,7 +51,7 @@ import Nyhedsbrevgreen from "../components/Nyhedsbrevgreen.astro";
     </div>
 
     <!-- Tekstsektion til højre -->
-<div class="w-full md:w-1/2 p-4 flex items-center justify-center">
+<div class="w-full md:w-1/2 p-4 flex items-center justify-center fade-up">
   <div class="max-w-md text-red font-oswald text-lg leading-relaxed space-y-14">
     
     <!-- Telefon nummer -->
@@ -102,3 +102,14 @@ import Nyhedsbrevgreen from "../components/Nyhedsbrevgreen.astro";
 	
 	</section>
 </MainLayout>
+
+<style>
+	.fade-up {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.fade-up.animate {
+  opacity: 1;
+  animation: fadeInUp 3s;
+}
+</style>
