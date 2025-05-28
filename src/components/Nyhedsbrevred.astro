@@ -20,7 +20,7 @@ import Heading from '../components/Heading.astro';
       
       <form class=" space-y-6">
         <div class="p-12">
-          <h1 class="text-beige font-header lg:text-5xl md:text-4xl xs:text-3xl pb-8">
+          <h1 class="text-beige font-header lg:text-5xl md:text-4xl xs:text-3xl pb-8 fade-up">
             TILMELD DIG VORES NYHEDSBREV HER
             </h1>
         <div class="pb-4">
@@ -59,3 +59,13 @@ import Heading from '../components/Heading.astro';
   </div>
 </section>
 
+<style>
+	.fade-up {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.fade-up.animate {
+  opacity: 1;
+  animation: fadeInUp 3s;
+}
+</style>
