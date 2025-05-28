@@ -25,10 +25,10 @@ import thumbsup from "../assets/images/thumbsup.png";
 		  {/* Content */}
 		  <div class="hero-content z-20 relative">
 			<div>
-        <h1 class="text-beige font-display lg:text-7xl md:text-6xl xs:text-6xl xs:pt-8 pb-8">Køb din billet</h1>
-        <h2 class="text-beige font-header lg:text-4xl md:text-3xl md:max-w-100 xs:text-2xl pb-8">VI GLÆDER OS TIL AT SE DIG</h2>
+        <h1 class="text-beige font-display lg:text-7xl md:text-6xl xs:text-6xl xs:pt-8 pb-8 fade-up">Køb din billet</h1>
+        <h2 class="text-beige font-header lg:text-4xl md:text-3xl md:max-w-100 xs:text-2xl pb-8 fade-up">VI GLÆDER OS TIL AT SE DIG</h2>
 
-              <section class="md:grid grid-cols-2 gap-10 ">
+              <section class="md:grid grid-cols-2 gap-10 fade-up">
                 <div class="xs:pb-8">
                 <Billet
                 url="/singleview"
@@ -72,3 +72,14 @@ import thumbsup from "../assets/images/thumbsup.png";
     <Nyhedsbrev></Nyhedsbrev>
 </section>
 </MainLayout>
+
+<style>
+	.fade-up {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.fade-up.animate {
+  opacity: 1;
+  animation: fadeInUp 3s;
+}
+</style>

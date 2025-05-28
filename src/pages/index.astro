@@ -164,22 +164,9 @@ import thumbsup from "../assets/images/thumbsup.png";
 		<Nyhedsbrev></Nyhedsbrev>
 	  </section>
 
-	  <script>
-		const observer = new IntersectionObserver((entries) => {
-		  entries.forEach(entry => {
-			if (entry.isIntersecting) {
-			  entry.target.classList.add('animate');
-			  observer.unobserve(entry.target); // kun én gang
-			}
-		  });
-		});
-	  
-		document.querySelectorAll('.fade-up').forEach(el => {
-		  observer.observe(el);
-		});
-	  </script>
-
 </MainLayout>
+
+
 
 <style>
 	.fade-up {
@@ -191,6 +178,3 @@ import thumbsup from "../assets/images/thumbsup.png";
   animation: fadeInUp 3s;
 }
 </style>
-
-
-  

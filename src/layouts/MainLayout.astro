@@ -37,5 +37,20 @@ const { title } = Astro.props;
 			<Footer></Footer>
 		</footer>
 			
+		<script>
+			const observer = new IntersectionObserver((entries) => {
+			  entries.forEach(entry => {
+				if (entry.isIntersecting) {
+				  entry.target.classList.add('animate');
+				  observer.unobserve(entry.target); // kun én gang
+				}
+			  });
+			});
+		  
+			document.querySelectorAll('.fade-up').forEach(el => {
+			  observer.observe(el);
+			});
+		  </script>
+
 	</body>
 </html>
