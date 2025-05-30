@@ -1,0 +1,8 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Basic-Auth = "exam:1234"
