@@ -10,7 +10,14 @@ import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
 ---
 <MainLayout title="Home - Odense Vinfestival">
-
+	<head>
+		<script>
+			const password = prompt("Adgangskode:");
+			if (password !== "dide1234"){
+				document.body.innerHTML = "Adgang nægtet";
+			}
+		</script>
+	</head>
 	<section>
 		<div class="min-h-screen relative overflow-hidden">
 	  
